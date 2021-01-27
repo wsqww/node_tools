@@ -1,0 +1,44 @@
+{
+	"dateTimePicker": {
+		"Apr": "April",
+		"Aug": "August",
+		"Dec": "December",
+		"Feb": "February",
+		"Fri": "Fri",
+		"Jan": "January",
+		"July": "July",
+		"June": "June",
+		"Mar": "March",
+		"May": "May",
+		"Mon": "Mon",
+		"Nov": "November",
+		"Oct": "October",
+		"Sat": "Sat",
+		"Sept": "September",
+		"Sun": "Sun",
+		"Thur": "Thu",
+		"Tues": "Tue",
+		"Wed": "Wed",
+		"month": "Month",
+		"year": "Year"
+	},
+	"projects": {
+		"examNotes": {
+			"examNote": "Examination requirements",
+			"examNote2": "Examination requirements",
+			"number": "Numbering",
+			"syncTime": "Update time",
+			"title": "Name"
+		},
+		"mobile": {
+			"event": {
+				"agreed": "examination passed",
+				"authorize": "Authorization application",
+				"authorizeCode": "Authorization code",
+				"disagreed": "Audit failed",
+				"lostParams": "MISSING PARAMETERS",
+				"waiting": "Application has been sent, please wait for review"
+			}
+		}
+	}
+}

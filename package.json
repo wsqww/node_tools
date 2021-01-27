@@ -1,0 +1,16 @@
+{
+  "name": "node_tools",
+  "version": "1.0.0",
+  "description": "nodejs tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "excel2json": "node ./demo/file_conversion/excel2json.js",
+    "json2excel": "node ./demo/file_conversion/json2excel.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.2.0"
+  }
+}
