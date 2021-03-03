@@ -27,7 +27,7 @@ workbook.views = [
 ];
 
 
-const filePath = __dirname + '/before/en.json';
+const filePath = __dirname + '/before/test.json';
 // console.log(filePath); return;
 fs.readFile(filePath, 'utf8', function (err, data) {
   if (err) {
@@ -38,7 +38,7 @@ fs.readFile(filePath, 'utf8', function (err, data) {
   // console.log(json);
   jsonLoop(json);
 
-  workbook.xlsx.writeFile(__dirname + '/after/en1.xlsx').then(function () {
+  workbook.xlsx.writeFile(__dirname + '/after/test1.xlsx').then(function () {
     console.log('saved');
   });
 

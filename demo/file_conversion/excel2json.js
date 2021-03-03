@@ -6,7 +6,7 @@ let jsonData = {};
 // return;
 
 const workbook = new Excel.Workbook();
-workbook.xlsx.readFile(__dirname + '/before/en.xlsx').then(() => {
+workbook.xlsx.readFile(__dirname + '/before/test.xlsx').then(() => {
   const worksheet = workbook.getWorksheet(1);
   worksheet.eachRow((row, rowNum) => {
     // if(rowNum === 25) {
@@ -22,7 +22,7 @@ workbook.xlsx.readFile(__dirname + '/before/en.xlsx').then(() => {
   jsonStr = `${jsonStr}\n`; // 末尾 空行
   // console.log('>>>>', jsonStr);
   // return;
-  fs.writeFile(__dirname + '/after/en1.json', jsonStr, function (err) {
+  fs.writeFile(__dirname + '/after/test1.json', jsonStr, function (err) {
     if (err) {
       console.log(err);
       return;
