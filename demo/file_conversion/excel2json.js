@@ -54,7 +54,7 @@ function jsonDeep(obj, keys) {
       }
       obj[keys[0]] = text;
     } else {
-      obj[keys[0]][keys[1]] = {};
+      obj[keys[0]][keys[1]] = '';
     }
   }
 }
