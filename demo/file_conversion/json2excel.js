@@ -4,6 +4,11 @@
 const fs = require('fs');
 const Excel = require("exceljs");
 
+
+const beforeFilePath = __dirname + '/before/test.json';
+const afterFilePath = __dirname + '/after/test1.xlsx';
+
+
 const workbook = new Excel.Workbook();
 
 // 基本的创建信息
@@ -29,9 +34,7 @@ workbook.views = [
 ];
 
 
-const filePath = __dirname + '/before/test.json';
-// console.log(filePath); return;
-fs.readFile(filePath, 'utf8', function (err, data) {
+fs.readFile(beforeFilePath, 'utf8', function (err, data) {
   if (err) {
     console.log(err);
     return;
@@ -40,7 +43,7 @@ fs.readFile(filePath, 'utf8', function (err, data) {
   // console.log(json);
   jsonLoop(json);
 
-  workbook.xlsx.writeFile(__dirname + '/after/test1.xlsx').then(function () {
+  workbook.xlsx.writeFile(afterFilePath).then(function () {
     console.log('saved');
   });
 

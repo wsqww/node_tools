@@ -3,12 +3,15 @@
 const fs = require('fs');
 const Excel = require("exceljs");
 
-let jsonData = {};
+const beforeFilePath = __dirname + '/before/test.xlsx';
+const afterFilePath = __dirname + '/after/test1.json';
 
+
+let jsonData = {};
 // return;
 
 const workbook = new Excel.Workbook();
-workbook.xlsx.readFile(__dirname + '/before/test.xlsx').then(() => {
+workbook.xlsx.readFile(beforeFilePath).then(() => {
   const worksheet = workbook.getWorksheet(1);
   worksheet.eachRow((row, rowNum) => {
     // if(rowNum === 25) {
@@ -24,7 +27,7 @@ workbook.xlsx.readFile(__dirname + '/before/test.xlsx').then(() => {
   jsonStr = `${jsonStr}\n`; // 末尾 空行
   // console.log('>>>>', jsonStr);
   // return;
-  fs.writeFile(__dirname + '/after/test1.json', jsonStr, function (err) {
+  fs.writeFile(afterFilePath, jsonStr, function (err) {
     if (err) {
       console.log(err);
       return;
